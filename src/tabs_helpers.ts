@@ -32,7 +32,8 @@ export type RegroupTabsPromise = (tabs: ChromeTab[]) => Promise<ChromeTab[]>
   
   
   const isVivaldiTab = (object: any): object is VivaldiTab => {
-    return object && 'vivExtData' in object;
+    // https://stackoverflow.com/questions/68659729/how-to-detect-clients-web-browser-is-vivaldi
+    return true;
   };
   
   function uuidv4(): string {
